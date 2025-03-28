@@ -163,3 +163,21 @@ footer ul{
 footer ul li a{
     color:white;
 }
+
+@media(max-width: 600px){
+    .produtos span{
+        width:100%;
+    }
+
+    .orgaos span{
+        width:100%;
+    }
+
+    footer{
+        flex-direction:column;
+    }
+
+    .navbar-toggler{
+        background:#234D9D;
+    }
+}
