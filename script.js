@@ -25,11 +25,7 @@
   });
 
   // simple form handler (demo)
-  document.getElementById('formDemo').addEventListener('submit', (e)=>{
-    e.preventDefault();
-    alert('Obrigado! Em breve entraremos em contato.');
-    e.target.reset();
-  });
+
 
   // year
   document.getElementById('year').textContent = new Date().getFullYear();

@@ -60,7 +60,7 @@
         </p>
         <div class="cta">
           <a href="#contato" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Solicitar demonstração</a>
-          <a href="#produtos" class="btn btn-outline"><i class="fa-solid fa-grid-2"></i> Ver produtos</a>
+          <a href="#produtos" class="btn btn-outline"><i class="fa-solid fa-grid-2"></i> Ver produtos e serviços</a>
         </div>
       </div>
 
@@ -117,25 +117,17 @@
       <div class="grid grid-3">
         <div class="card">
           <div class="chip"><i class="fa-solid fa-chalkboard-user"></i> Gestão Educacional</div>
-          <h3>Plataforma Educacional</h3>
+          <h3>FR Educacional</h3>
           <p>
             Matrículas, turmas, frequência, relatórios, comunicação escola-família e portal do aluno — tudo em nuvem.
           </p>
         </div>
 
         <div class="card">
-          <div class="chip"><i class="fa-solid fa-envelope-circle-check"></i> Disparador de E-mails</div>
-          <h3>Envio Massivo Confiável</h3>
+          <div class="chip"><i class="fa-solid fa-chalkboard-user"></i> Comunicação</div>
+          <h3>PortalFreitas</h3>
           <p>
-            Campanhas com alta entregabilidade, autenticação SPF/DKIM/DMARC, templates e relatórios em tempo real.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="chip"><i class="fa-solid fa-cloud"></i> Nuvem</div>
-          <h3>Infraestrutura Governamental</h3>
-          <p>
-            Hospedagem segura, backups, monitoramento e escalabilidade para portais e sistemas críticos.
+            Portal Institucional,E-SIC,Ouvidoria,Chatbot,Campanhas de Comunicação,Integração com PNCP
           </p>
         </div>
       </div>
@@ -176,24 +168,36 @@
 
       <div class="clients">
         <div class="client">
-          <img src="https://placehold.co/84x84/png?text=P1" alt="Logo Prefeitura 1">
-          <span>Prefeitura Municipal de Ipaba</span>
+          <img src="img/crtes.png" alt="Logo Prefeitura 1" style="background:#1b5783;">
+          <span>Conselho Regional dos Técnicos Industriais do Espirito Santo</span>
         </div>
         <div class="client">
-          <img src="https://placehold.co/84x84/png?text=S1" alt="Logo Secretaria 1">
-          <span>Secretaria Municipal de Educação</span>
+          <img src="img/corepb.png" alt="Logo Instituto 1" style="background:#233e63;">
+          <span>Conselho Regional dos Representantes Comerciais da Paraíba</span>
         </div>
         <div class="client">
-          <img src="https://placehold.co/84x84/png?text=P2" alt="Logo Prefeitura 2">
-          <span>Prefeitura Municipal de Santana</span>
+          <img src="img/saojoaodalagoa.png" alt="Logo Secretaria 1">
+          <span>Secretaria Municipal de Educação de São João da Lagoa</span>
         </div>
         <div class="client">
-          <img src="https://placehold.co/84x84/png?text=C1" alt="Logo Câmara 1">
-          <span>Câmara Municipal de João Monlevade</span>
+          <img src="img/guaxupe.png" alt="Logo Prefeitura 2">
+          <span>Câmara Municipal de Guaxupé</span>
         </div>
         <div class="client">
-          <img src="https://placehold.co/84x84/png?text=I1" alt="Logo Instituto 1">
-          <span>Instituto de Previdência Municipal</span>
+          <img src="img/crease.png" alt="Logo Câmara 1">
+          <span>Conselho Regional de Engenharia de Agronomia de Sergipe</span>
+        </div>
+        <div class="client">
+          <img src="img/aimores.png" alt="Logo Secretaria 1" style="background:#ffab00;">
+          <span>Secretaria Municipal de Educação de Aimorés</span>
+        </div>
+        <div class="client">
+          <img src="img/peixe.png" alt="Logo Secretaria 1">
+          <span>Secretaria Municipal de Educação de Peixe</span>
+        </div>
+        <div class="client">
+          <img src="img/consaude_ribeira.png" alt="Logo Secretaria 1">
+          <span>Consórcio Intermunicipal de Saúde do Vale do Ribeira.</span>
         </div>
       </div>
 
@@ -248,8 +252,8 @@
           <p>
             Atendemos em todo o Brasil com time remoto e infraestrutura em nuvem.
           </p>
-          <p><i class="fa-solid fa-envelope"></i> contato@frtecnologia.com.br</p>
-          <p><i class="fa-brands fa-whatsapp"></i> (31) 00000-0000</p>
+          <p><i class="fa-solid fa-envelope"></i> contato@frtecnologiadigital.com.br</p>
+          <a href="https://wa.me/5531983086235"><i class="fa-brands fa-whatsapp"></i> (31) 98308-6235</a>
           <p style="color:var(--muted)">Responderemos em até 1 dia útil.</p>
         </div>
       </div>
@@ -272,12 +276,12 @@
           Soluções em nuvem, desenvolvimento e infraestrutura para governos.
         </p>
       </div>
-      <div>
+      <!-- <div>
         <h4>Produtos</h4>
         <p><a href="#produtos">Gestão Educacional</a></p>
         <p><a href="#produtos">Disparador de E-mails</a></p>
         <p><a href="#produtos">Infraestrutura em Nuvem</a></p>
-      </div>
+      </div> -->
       <div>
         <h4>Institucional</h4>
         <p><a href="#sobre">Sobre</a></p>
@@ -293,4 +297,32 @@
 </footer>
 <script src="script.js"></script>
 </body>
+<script>
+document.getElementById("formDemo").addEventListener("submit", function (e) {
+    e.preventDefault(); // impede envio normal
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const orgao = document.getElementById("orgao").value;
+    const msg = document.getElementById("msg").value;
+
+    // monta o texto com quebra de linha usando %0A
+    const texto =
+        "Nova mensagem via formulário:%0A" +
+        "Nome: " + encodeURIComponent(nome) + "%0A" +
+        "E-mail: " + encodeURIComponent(email) + "%0A" +
+        "Órgão público: " + encodeURIComponent(orgao) + "%0A" +
+        "Mensagem: " + encodeURIComponent(msg);
+    // console.log(texto)
+    // return false;
+    // número do WhatsApp (DDD + número, sem + ou -)
+    const numero = "5531983086235"; // <-- altere aqui
+
+    // link final
+    const link = "https://wa.me/" + numero + "?text=" + texto;
+
+    // redireciona
+    window.location.href = link;
+});
+</script>
 </html>
